@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Leave Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Employee Leave Management System</h1>
+
+  <div class="login-container">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="dashboard" style="display:none;">
+    <h2>Welcome!</h2>
+    <button onclick="showLeaveForm()">Apply Leave</button>
+    <button onclick="loadLeaves()">View All Leaves</button>
+    
+    <div id="leaveForm" style="display:none;">
+      <input type="text" id="reason" placeholder="Reason">
+      <input type="date" id="start">
+      <input type="date" id="end">
+      <button onclick="applyLeave()">Submit</button>
+    </div>
+
+    <div id="leavesList"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
